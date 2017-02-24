@@ -3,10 +3,10 @@
         <record id="purchase_order_export_form" model="ir.ui.view">
             <field name="name">PO Export Form</field>
             <field name="model">purchase.order</field>
-	    <field name="inherit_id" ref="purchase.purchase_order_form" />
+	    <field name="inherit_id" ref="purchase_vendor_lot_receiving.purchase_order_license_plate_form" />
             <field name="arch" type="xml">
-		<button name="print_quotation" position="before">
-		    <button name="export_purchase_order" string="Export PO" type="object" />
+		<button name="view_picking" position="after">
+		    <button name="%(purchase_import_export_act)d" string="Import/Export" type="action" />
 		</button>
 	    </field>
 	</record>

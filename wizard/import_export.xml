@@ -1,0 +1,27 @@
+<openerp>
+    <data>
+        <record id="purchase_import_export_menu" model="ir.ui.view">
+            <field name="name">Import/Export</field>
+            <field name="model">purchase.order.importexport</field>
+            <field name="arch" type="xml">
+                <form string="">
+		    <group>
+			<field name="purchase" required="1"/>
+                	<field name="operation" />
+			<field name="file" attrs="{'invisible': [('operation', 'not in', ('import_costs', 'import_receipt'))], 'required': [('operation', 'in', ('import_costs', 'import_receipt'))]}"/>
+			<button name="execute_import_export" type="object" string="Execute" />
+		    </group>
+                </form>
+            </field>
+        </record>
+
+         <act_window name="Import/Export"
+            res_model="purchase.order.importexport"
+            src_model="purchase.order"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="purchase_import_export_act"/>
+
+    </data>
+</openerp>

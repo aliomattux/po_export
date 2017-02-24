@@ -3,11 +3,12 @@
     'version': '1.1',
     'author': 'Kyle Waid',
     'category': 'Sales Management',
-    'depends': ['purchase'],
+    'depends': ['purchase', 'purchase_vendor_lot_receiving'],
     'website': 'https://www.gcotech.com',
     'description': """ 
     """,
-    'data': ['wizard/purchase.xml',
+    'data': ['wizard/import_export.xml',
+	'wizard/purchase.xml',
     ],
     'test': [
     ],
